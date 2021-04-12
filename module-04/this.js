@@ -120,3 +120,70 @@
 
 // a();
 // b();
+
+// 12.04 -----------------------------
+
+const obj = {
+  name: 'John',
+  /* 
+    this: ???
+  */
+  logName() {
+    console.log(this.name);
+  },
+};
+
+/*
+  this: obj
+*/
+obj.logName();
+
+/*
+  this: obj
+*/
+const bindedFn = obj.logName.bind(obj);
+
+/*
+  this: obj
+*/
+bindedFn();
+
+/*
+  this: ???
+*/
+const fn = obj.logName;
+
+/*
+  this: undefined
+*/
+fn();
+
+// logName()
+
+// const logName = function() {
+//   console.log('name');
+// }
+
+// function logName() {
+//   console.log('name');
+// }
+
+// const fn = logName;
+
+// fn()
+
+// const obj = {
+//   name: 'John',
+// };
+
+// function logName() {
+//   console.log(this.name);
+// }
+
+// obj.logName = logName;
+
+// function caller(callback) {
+//   callback();
+// }
+
+// caller(obj.logName);
