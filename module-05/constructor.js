@@ -169,3 +169,33 @@ storageObject1.getItems();
 // Static methods
 
 console.log(Storage.count);
+
+// --------------------
+console.log('Counter');
+
+/**
+ * Counter
+ * Зберігає поточне значення лічильника: value
+ * При створенні екземпляру можна вказати початкове значення лічильника
+ * Має метод для збільшення значення лічильника на 1
+ */
+
+function Counter(initialValue) {
+  this.value = initialValue;
+}
+
+Counter.prototype.increment = function () {
+  this.value += 1;
+};
+
+const counter1 = new Counter(5);
+counter1.increment();
+console.log(counter1.value); // 6
+
+const counter2 = new Counter(99);
+counter2.increment();
+counter2.increment();
+console.log(counter2.value); // 101
+
+counter1.increment();
+console.log(counter1.value); // 7
