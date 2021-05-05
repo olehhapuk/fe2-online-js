@@ -1,0 +1,26 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  --color-dark: #2d2d2d;
+  --color-secondary: #7c8db5;
+  --color-accent: #f8991c;
+  --color-border: #e6effb;
+  --color-disabled: #dadada;
+
+  font-family: sans-serif;
+  color: var(--color-dark);
+}
+
+/* Container */
+
+.container {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* /Container */
