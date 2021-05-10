@@ -17,19 +17,35 @@ fetch('../data/playlists.json')
 */
 
 function newReleasesLoaded(data) {
-  const imageUrl = data.albums.items[0].images[1].url;
+  const items = [];
 
   const releasesElem = document.querySelector('#newReleases');
 
-  const releaseItemElem = document.createElement('li');
-  releaseItemElem.className = 'release';
+  for (const release of data.albums.items) {
+    const imageUrl = release.images[1].url;
 
-  const releaseItemImageElem = document.createElement('img');
-  releaseItemImageElem.src = imageUrl;
+    const releaseItemElem = document.createElement('li');
+    releaseItemElem.className = 'release';
 
-  releaseItemElem.appendChild(releaseItemImageElem);
+    const imageElem = document.createElement('img');
+    imageElem.src = imageUrl;
+    imageElem.className = 'release__img';
 
-  releasesElem.appendChild(releaseItemElem);
+    const nameElem = document.createElement('h4');
+    nameElem.textContent = release.name;
+    nameElem.className = 'release__name';
+
+    const artistElem = document.createElement('p');
+    artistElem.textContent = release.artists[0].name;
+
+    releaseItemElem.appendChild(imageElem);
+    releaseItemElem.appendChild(nameElem);
+    releaseItemElem.appendChild(artistElem);
+
+    items.push(releaseItemElem);
+  }
+
+  releasesElem.append(...items);
 }
 
 function playlistsLoaded(data) {}

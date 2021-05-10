@@ -11,7 +11,7 @@ html {
   --color-border: #e6effb;
   --color-disabled: #dadada;
 
-  font-family: sans-serif;
+  font-family: 'Lato', sans-serif;
   color: var(--color-dark);
 }
 
@@ -24,3 +24,42 @@ html {
 }
 
 /* /Container */
+
+.releases {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
+  row-gap: 30px;
+}
+
+.release {
+  border: 2px solid var(--color-dark);
+  padding: 22px;
+}
+
+.release__name {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.release__img {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .releases {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 414px) {
+  .releases {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

@@ -5,11 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Audio Catalog</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
   </head>
   <body>
     <div class="container">
+      <nav class="nav">
+        <button type="button" class="nav__toggler" id="navToggler">
+          <img src="images/icons/nav_menu.svg" alt="Open nav menu" />
+        </button>
+
+        <ul class="nav__menu">
+          <li class="nav__item nav__item_active">
+            <a href="#" class="nav__link">Browse</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Search</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Library</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Profile</a>
+          </li>
+        </ul>
+      </nav>
+
       <section class="section">
         <h2 class="section__title section__title_releases">New releases</h2>
 
@@ -26,5 +55,6 @@
     </div>
 
     <script src="scripts/index.js"></script>
+    <script src="scripts/navbar.js"></script>
   </body>
 </html>
