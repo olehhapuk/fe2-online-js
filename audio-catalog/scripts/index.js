@@ -50,20 +50,16 @@ function newReleasesLoaded(data) {
 }
 
 function playlistsLoaded(data) {
-  console.log(data.playlists.items);
-  
+  // console.log(data.playlists.items);
 
   for (const playlist of data.playlists.items) {
     // Name
-    console.log(playlist.name);
-
+    // console.log(playlist.name);
     // Description
-    console.log(playlist.description);
-
+    // console.log(playlist.description);
     // Image
-    console.log(playlist.images[0].url);
-
+    // console.log(playlist.images[0].url);
     // Tracks count
-    console.log(playlist.tracks.total);
+    // console.log(playlist.tracks.total);
   }
 }
