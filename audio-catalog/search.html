@@ -28,11 +28,11 @@
         </button>
 
         <ul class="nav__menu">
-          <li class="nav__item nav__item_active">
-            <a href="#" class="nav__link">Browse</a>
-          </li>
           <li class="nav__item">
-            <a href="#" class="nav__link">Search</a>
+            <a href="/index.html" class="nav__link">Browse</a>
+          </li>
+          <li class="nav__item nav__item_active">
+            <a href="/search.html" class="nav__link">Search</a>
           </li>
           <li class="nav__item">
             <a href="#" class="nav__link">Library</a>
@@ -47,7 +47,52 @@
         </ul>
       </nav>
 
-      <!-- Content goes here -->
+      <form class="search-form">
+        <!-- SearchBar -->
+        <div class="searchbar">
+          <input
+            type="text"
+            id="searchbar"
+            name="query"
+            placeholder="Search"
+            class="searchbar__input"
+          />
+
+          <button type="submit" id="searchBtn" class="searchbar__btn">
+            <img src="/images/icons/search.svg" alt="Search" />
+          </button>
+        </div>
+        <!-- ./SearchBar -->
+
+        <!-- Content type -->
+        <div class="types-list">
+          <div class="type">
+            <button type="button" class="type__btn">
+              <span class="type__text">Album</span>
+              <div class="type__overlay">
+                <img
+                  src="/images/icons/type-check.svg"
+                  alt="Selected"
+                  class="type__check-icon"
+                />
+              </div>
+            </button>
+          </div>
+          <div class="type">
+            <button type="button" class="type__btn">
+              <span class="type__text">Artist</span>
+              <div class="type__overlay">
+                <img
+                  src="/images/icons/type-check.svg"
+                  alt="Selected"
+                  class="type__check-icon"
+                />
+              </div>
+            </button>
+          </div>
+        </div>
+        <!-- ./Content type -->
+      </form>
     </div>
 
     <!-- Custom JS -->
